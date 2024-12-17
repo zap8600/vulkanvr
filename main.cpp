@@ -1,16 +1,17 @@
-#include "stirling.hpp"
+#include "./stirling/stirling.hpp"
 #include <iostream>
 #include <stdexcept>
+#include <cstdlib>
 
 int main() {
-    Application app;
+    StirlingApplication app;
     
     try {
         app.run();
     } catch(const std::exception& e) {
         std::cerr << e.what() << std::endl;
-        return 1;
+        return EXIT_FAILURE;
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }
